@@ -10,6 +10,7 @@ const projects = [
     description:
       "A smart platform designed to streamline and automate college administrative and academic processes, reducing manual effort while delivering a seamless, efficient, and user-friendly experience for students and staff.",
     stack: "Node.js · React · PostgreSQL · Sequelize · JWT",
+    github: "https://github.com/josephcbweb/CEC-connect"
   },
   {
     number: "02",
@@ -17,21 +18,30 @@ const projects = [
     description:
       "An employee portal designed to streamline workflows through timesheet management, admin controls, secure remote access, and centralized infrastructure.",
     stack: "Node.js · Express · MySQL · Redis",
+    github: "https://github.com/josephcbweb/waves"
   },
   {
     number: "03",
-    title: "StreamLine: A system developed to increase the productivity and optimize office works",
+    title: "E-Commerce Backend API",
     description:
-      "A service-based application using event-driven communication between independent services.",
-    stack: "Node.js · RabbitMQ · Sequelize · Docker",
+      "A RESTful e-commerce backend built with Node.js and Express, featuring JWT authentication, role-based access control, product and cart management, order processing, image uploads, and Redis caching.",
+    stack: "Node.js · Express.js · MySQL · Sequelize · JWT · Redis · Docker · Swagger",
+    github: "https://github.com/CodeLachu/ecommerce-backend-api"
   },
-  {
-    number: "04",
-    title: "BakerHub: Bakery Order Management Platform",
-    description:
-      "An online bakery platform for browsing and ordering cakes, cookies, pastries, and other baked products.",
-    stack: "Node.js · RabbitMQ · Sequelize · Docker",
-  },
+  // {
+  //   number: "04",
+  //   title: "StreamLine: A system developed to increase the productivity and optimize office works",
+  //   description:
+  //     "A service-based application using event-driven communication between independent services.",
+  //   stack: "Node.js · RabbitMQ · Sequelize · Docker",
+  // },
+  // {
+  //   number: "05",
+  //   title: "BakerHub: Bakery Order Management Platform",
+  //   description:
+  //     "An online bakery platform for browsing and ordering cakes, cookies, pastries, and other baked products.",
+  //   stack: "Node.js · RabbitMQ · Sequelize · Docker",
+  // },
 ];
 
 function App() {
@@ -679,9 +689,11 @@ function App() {
                   </div>
                   <div className="md:justify-self-stretch md:pt-1 md:pl-60">
                   <p className="text-xs font-medium text-slate-500">{project.stack}</p>
-                  <button className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-white transition group-hover:text-[#f59b18] cursor-pointer">
-                    View project <ArrowRight size={15} />
-                  </button>
+                  <a href={project.github} target="_blank" rel="noopener noreferrer"
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-white transition group-hover:text-[#f59b18]"
+                  >
+                  View project <ArrowRight size={15} />
+                  </a>
                   </div>
                 </motion.article>
               ))}
